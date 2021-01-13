@@ -19,6 +19,7 @@ Init the lib like this:
 
 Shutdown the lib like this (this is 100% necessary):
 ```dm
+/world/Del()
 	var/auxtools_tg = (world.system_type == MS_WINDOWS ? "./auxtools_tg.dll" : "./libauxtools_tg.so")
 	call(auxtools_tg, "auxtools_shutdown")()
 	. = ..()
